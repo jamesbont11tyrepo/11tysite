@@ -1,0 +1,26 @@
+---
+pagination:
+  data: collections.postsByMonth
+  size: 1
+  alias: monthData
+permalink: "/posts/{{ monthData[0] }}/"
+layout: layouts/page.html
+eleventyComputed:
+  title: "Posts from {{ monthData[0] }}"
+---
+
+<h1>Posts from {{ monthData[0] }}</h1>
+
+  {%- set monthPosts = monthData[1] -%}
+  {% for post in monthPosts | reverse %}
+  <article>
+        <h3><a class="permalink" href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                {{ post.content | safe }}
+        <p class="date">{{ post.data.date }}</p>
+        <p class="tags">Tags:
+            {% for tag in post.data.tags %}
+        <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+            {% endfor %}</p>
+        <hr class="solid">
+    </article>
+  {% endfor %}

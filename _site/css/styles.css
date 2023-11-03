@@ -1,0 +1,393 @@
+/* || General styles */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	background-color: #dbd4c3; 
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	
+}
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* This ends the HTML5 rules */
+
+body {
+  overflow-x: auto;  
+}
+
+main {
+	margin-top: 5em;
+}
+
+article {
+  margin: auto;
+  width: 80%
+}
+
+@font-face {
+    font-family: "Permanent Marker";
+    src: local("Permanent Marker"), 
+    		url(/assets/fonts/PermanentMarker-Regular.woff2) format("woff2"),
+        url(/assets/fonts/PermanentMarker-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Rock Salt";
+    src: url(/assets/fonts/RockSalt-Regular.woff2) format("woff2"),
+				 url(/assets/fonts/RockSalt-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AppleGaramond";
+    src: local("AppleGaramond"), 
+        url(/assets/fonts/AppleGaramond.woff) format("woff");
+}
+
+@font-face {
+    font-family: "AppleGaramond-Bold";
+    src: local("AppleGaramond-Bold"), 
+        url(/assets/fonts/AppleGaramond-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: "AppleGaramond-BoldItalic";
+    src: local("AppleGaramond-BoldItalic"), 
+        url(/assets/fonts/AppleGaramond-BoldItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: "AppleGaramond-Italic";
+    src: local("AppleGaramond-Italic"), 
+        url(/assets/fonts/AppleGaramond-Italic.woff) format("woff");
+}
+
+@font-face {
+    font-family: "AppleGaramond-Light";
+    src: local("AppleGaramond-Light"), 
+        url(/assets/fonts/AppleGaramond-Light.woff) format("woff");
+}
+
+@font-face {
+    font-family: "AppleGaramond-LightItalic";
+    src: local("AppleGaramond-LightItalic"), 
+        url(/assets/fonts/AppleGaramond-LightItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Univers-47-Condensed-Light-Regular";
+    src: local("Univers-47-Condensed-Light-Regular"), 
+        url(/assets/fonts/Univers-47-Condensed-Light-Regular.woff) format("woff");        
+}
+
+@font-face {
+    font-family: "Univers-47-Condensed-Light-Oblique";
+    src: local("Univers-47-Condensed-Light-Oblique"), 
+        url(/assets/fonts/Univers-47-Condensed-Light-Oblique.woff) format("woff");        
+}
+
+@font-face {
+    font-family: "Reenie Beanie";
+    src: local("ReenieBeanie-Regular"), 
+    		url(/assets/fonts/ReenieBeanie-Regular.woff2) format("woff2"),
+        url(/assets/fonts/ReenieBeanie-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Nothing You Could Do";
+    src: local("NothingYouCouldDo-Regular"), 
+    		url(/assets/fonts/NothingYouCouldDo-Regular.woff2) format("woff2"),
+        url(/assets/fonts/NothingYouCouldDo-Regular.woff) format("woff");        
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Permanent Marker", "Rock Salt";
+  color: #3b3a36; 
+  margin-top: 1.3em;
+  text-align: left;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font: 4em "Permanent Marker", "Rock Salt";
+  margin-left: 0.3em;
+}
+
+h2 {
+  font: 2em/2.5 "Permanent Marker", "Rock Salt";
+  margin-left: 0.5em;
+}
+
+h3 {
+  font: 2.2em/2 "Permanent Marker", "Rock Salt";
+ 	margin: 4em auto 1em auto;
+ 	width: 80%;
+}
+
+p {
+  font: 1.3em "AppleGaramond-Light" /*2em "Reenie Beanie", "Nothing You Could Do"*/;
+  margin: auto auto 1.3em auto;
+  width: 80%;
+  text-align: left;
+  color: #3b3a36;
+}
+
+
+strong {
+	font: 1em "AppleGaramond-Bold" /*2em "Reenie Beanie", "Nothing You Could Do"*/;
+  margin: auto auto 1.3em auto;
+  width: 80%;
+  text-align: left;
+  color: #3b3a36;
+}
+
+em {
+	font: 1.2em "AppleGaramond-LightItalic" /*2em "Reenie Beanie", "Nothing You Could Do"*/;
+  margin: auto auto 1.3em auto;
+  width: 80%;
+  text-align: left;
+  color: #3b3a36;
+
+}
+
+
+
+p.date {
+	font: 1.7em "Reenie Beanie", "Nothing You Could Do";
+	margin: auto;
+	text-align: center;
+  color: #5b5b59;
+}
+
+p.tags {
+	font: 1.3em "Reenie Beanie", "Nothing You Could Do";
+	margin: auto;
+	text-align: center;
+  color: #5b5b59;
+}
+
+p.footer {
+	font: 2em "Reenie Beanie", "Nothing You Could Do";
+  margin: auto;
+  width: 80%;
+  text-align: left;
+  color: #3b3a36;
+}
+
+li {
+	font: 2em "Reenie Beanie", "Nothing You Could Do";
+	list-style: none;
+	padding: 0.5em;
+}
+
+a.link:link {
+	color: #6900ff;
+}
+
+a.link:visited {
+	color: #e0352c;
+}
+
+a.link:focus {
+	text-decoration: none;
+  background: none;
+}
+
+a.link:hover {
+	text-decoration: none;
+}
+
+a.permalink:link {
+	color: #3b3a36;
+}
+
+a.permalink:visited {
+	color: #3b3a36;
+}
+
+a.permalink:focus {
+	text-decoration: none;
+  background: none;
+}
+
+a.permalink: hover {
+	text-decoration: none;
+}
+
+/* Horizontal solid border for ends of posts */
+hr.solid {
+  border-top: 2px solid #5b5b59;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+/* Vertical line for separating footer links */
+.vl {
+  border-left: 1px solid #3b3a36;
+  height: 20px;
+}
+
+/* || Utilities */
+
+/* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their 
+containers: https://github.com/h5bp/html5-boilerplate/issues/440 */
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* || Sitewide */
+
+.topnav {
+	position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #3b3a36; 
+  font: 2em/2 "Reenie Beanie", "Nothing You Could Do";
+  box-shadow: 0px 2px 3px 3px rgba(0,0,0,0.3), 0px 2px 3px 3px rgba(0,0,0,0.1);
+}
+
+.topnav a {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3a36;
+  color: #dbd4c3;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+
+.topnav .split {
+  float: left;
+  margin-left: -0.4em;
+  background-color: #3b3a36;
+}
+
+/* || Homepage pagination */
+
+.pagination {
+  font: 2em "Reenie Beanie", "Nothing You Could Do";
+  text-align: center;
+}
+
+ /* Pagination links */
+.pagination a {
+  color: #3b3a36;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+
+/* Style the active/current pagination link */
+.pagination a.active {
+  background-color: #3b3a36;
+	color: #dbd4c3;
+}
+
+.footer {
+  display: flex;
+  width: 65%;
+  align-items: center;
+  margin: auto;
+}
+
+.footer a {
+	color: #3b3a36;
+}
+
+/* || Gallery styles (Animation, Illustrations, Photography) */
+
+/* Grid settings */
+.gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 375px 375px 375px;
+  gap: 6px;
+}
+
+/* Grid-wide landscape photos should resize to 1137px */
+
+div.fullwidth img {
+	width: 1137px;
+	margin-bottom: 6px;
+}
+
+div.column img {
+  width: 375px;
+  margin-bottom: 6px;
+}
+
+/* Grid video settings */
+div.video {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 500px 500px;
+  gap: 6px;
+}
+
+div.video video {
+	width: 500px;
+	margin-bottom: 1em;
+}
+
+/* Post media settings */
+div.postvid {
+	width: 80%;
+	margin-left: 17%;
+	margin-right: 17%;
+}
+
+div.postvid video {
+	margin-bottom: 1.6em;
+	width: 600px;
+}
+
+div.postimg {
+	margin-left: 17%;
+	margin-right: 17%;
+	width: 80%
+}
+
+div.postimg img {
+	margin-bottom: 1.6em;
+}

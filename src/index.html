@@ -1,0 +1,28 @@
+---
+pagination:
+  data: collections.posts
+  size: 2
+  reverse: true
+  alias: posts
+  permalink: "/{% if pagination.pageNumber != 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+  layout: layouts/base.html
+---
+
+{%- for post in posts -%}
+	<article>
+		<h3><a class="permalink" href="{{ post.url }}">{{ post.data.title }}</a></h3>
+				{{ post.content | safe }}
+		<p class="date">{{ post.data.date }}</p>
+		<p class="tags">Tags:
+			{% for tag in post.data.tags %}
+		<a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+			{% endfor %}</p>
+		<hr class="solid">
+	</article>
+{%- endfor -%}
+
+		<nav class="pagination" aria-label="Pagination">
+{%- for pageEntry in pagination.pages %}
+			<li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index0 }}</a></li>
+{%- endfor %}
+		</nav> 
