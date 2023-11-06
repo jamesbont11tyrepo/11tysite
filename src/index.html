@@ -4,8 +4,8 @@ pagination:
   size: 2
   reverse: true
   alias: posts
-  permalink: "/{% if pagination.pageNumber != 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
-  layout: layouts/base.html
+permalink: "/{% if pagination.pageNumber != 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+layout: layouts/base.html
 ---
 
 {%- for post in posts -%}

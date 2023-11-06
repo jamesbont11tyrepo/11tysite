@@ -7,6 +7,9 @@ tags: ['to do']
 ---
 
 I need to:
-1. Fix monthly post views.
+1. Fix monthly post views. 
+<aside>This is a test note for my margins.</aside>
+
 2. Fix incorrect page numbers displaying in URL after clicking a pagination link \(off by 1.)
+
 

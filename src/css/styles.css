@@ -182,7 +182,22 @@ em {
 
 }
 
+aside {    
+	float: right;    
+	clear: right;    
+	margin-right: -60%;    
+	width: 50%;    
+	margin-top: 0.3rem;    
+	margin-bottom: 0;    
+	font-size: 1.1rem;    
+	line-height: 1.3;    
+	vertical-align: baseline;    
+	position: relative;
+}
 
+aside > p {
+  margin: 0.5rem;
+}
 
 p.date {
 	font: 1.7em "Reenie Beanie", "Nothing You Could Do";
