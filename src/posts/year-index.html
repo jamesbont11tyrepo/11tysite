@@ -3,7 +3,7 @@ pagination:
   data: collections.postsByYear
   size: 1
   alias: yearData
-permalink: "/posts/{{ yearData[0] }}/"
+permalink: "/{{ yearData[0] }}/"
 layout: layouts/page.html
 eleventyComputed:
   title: "Posts from {{ yearData[0] }}"
