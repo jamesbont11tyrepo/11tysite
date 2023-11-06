@@ -1,3 +1,5 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets/");
 	eleventyConfig.addPassthroughCopy("src/css/");
@@ -7,6 +9,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/**/*.md")
 })
+	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addCollection("postsByYear", collection => {
     const grouped = {}
     for (const post of collection.getFilteredByGlob("src/posts/**/*.md")) {

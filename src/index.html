@@ -23,6 +23,6 @@ layout: layouts/base.html
 
 		<nav class="pagination" aria-label="Pagination">
 {%- for pageEntry in pagination.pages %}
-			<li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index0 }}</a></li>
+			<li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
 {%- endfor %}
 		</nav> 
