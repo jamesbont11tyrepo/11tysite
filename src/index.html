@@ -21,11 +21,24 @@ layout: layouts/base.html
 	</article>
 {%- endfor -%}
 
+{% if pagination.pages >= 2 %}
 		<nav class="pagination" aria-label="Pagination">
-{%- for pageEntry in pagination.pages %}
-			<!--<a href="#">&laquo;</a>
-			<a class="active" href="#">1</a> -->
+{% set increment = 5 %}
+{% if pagination.hrefs[pagination.pageNumber - increment] %}
+  <a href="{{ pagination.hrefs[pagination.pageNumber - increment] }}">&laquo;</a>
+{% endif %}
+{% if pagination.href.previous %}
+			<a href="{{ pagination.href.previous }}">&lt;</a>
+{% endif %}
+{%- for pageEntry in pagination.pages %}		
 			<a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
-			<!--><a href="#">&raquo;</a> -->
 {%- endfor %}
+{% if pagination.href.next %}
+			<a href="{{ pagination.href.next }}">&gt;</a>
+{% endif %}
+{% set increment = 5 %}
+{% if pagination.hrefs[pagination.pageNumber + increment] %}
+  <a href="{{ pagination.hrefs[pagination.pageNumber + increment] }}">&raquo;</a>
+{% endif %}
 		</nav> 
+{% endif %}
