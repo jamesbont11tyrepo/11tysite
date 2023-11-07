@@ -3,7 +3,7 @@ pagination:
   data: collections.postsByMonth
   size: 1
   alias: monthData
-permalink: "/{{ monthData[0] }}/"
+permalink: "/posts/{{ monthData[0] }}/"
 layout: layouts/page.html
 eleventyComputed:
   title: "Posts from {{ monthData[0] }}"
