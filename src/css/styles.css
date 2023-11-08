@@ -1,3 +1,82 @@
+/* || Fonts */
+@font-face {
+    font-family: "Permanent Marker";
+    src: local("Permanent Marker"), 
+    	url(/assets/fonts/PermanentMarker-Regular.woff2) format("woff2"),
+      url(/assets/fonts/PermanentMarker-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Rock Salt";
+    src: local("Rock Salt"),
+    	url(/assets/fonts/RockSalt-Regular.woff2) format("woff2"),
+			url(/assets/fonts/RockSalt-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AppleGaramond";
+    src: local("AppleGaramond"), 
+      url(/assets/fonts/AppleGaramond.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AppleGaramond-Bold";
+    src: local("AppleGaramond-Bold"), 
+        url(/assets/fonts/AppleGaramond-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: "AppleGaramond-BoldItalic";
+    src: local("AppleGaramond-BoldItalic"), 
+        url(/assets/fonts/AppleGaramond-BoldItalic.woff) format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "AppleGaramond-Italic";
+    src: local("AppleGaramond-Italic"), 
+        url(/assets/fonts/AppleGaramond-Italic.woff) format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "AppleGaramond-Light";
+    src: local("AppleGaramond-Light"), 
+        url(/assets/fonts/AppleGaramond-Light.woff) format("woff");
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AppleGaramond-LightItalic";
+    src: local("AppleGaramond-LightItalic"), 
+        url(/assets/fonts/AppleGaramond-LightItalic.woff) format("woff");
+    font-weight: light;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Reenie Beanie";
+    src: local("ReenieBeanie-Regular"), 
+    		url(/assets/fonts/ReenieBeanie-Regular.woff2) format("woff2"),
+        url(/assets/fonts/ReenieBeanie-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Nothing You Could Do";
+    src: local("NothingYouCouldDo-Regular"), 
+    		url(/assets/fonts/NothingYouCouldDo-Regular.woff2) format("woff2"),
+        url(/assets/fonts/NothingYouCouldDo-Regular.woff) format("woff");        
+}
+
 /* || General styles */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -50,85 +129,6 @@ main {
 article {
   margin: auto;
   width: 80%
-}
-
-@font-face {
-    font-family: "Permanent Marker";
-    src: local("Permanent Marker"), 
-    		url(/assets/fonts/PermanentMarker-Regular.woff2) format("woff2"),
-        url(/assets/fonts/PermanentMarker-Regular.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Rock Salt";
-    src: url(/assets/fonts/RockSalt-Regular.woff2) format("woff2"),
-				 url(/assets/fonts/RockSalt-Regular.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "AppleGaramond";
-    src: local("AppleGaramond"), 
-        url(/assets/fonts/AppleGaramond.woff) format("woff");
-}
-
-@font-face {
-    font-family: "AppleGaramond-Bold";
-    src: local("AppleGaramond-Bold"), 
-        url(/assets/fonts/AppleGaramond-Bold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "AppleGaramond-BoldItalic";
-    src: local("AppleGaramond-BoldItalic"), 
-        url(/assets/fonts/AppleGaramond-BoldItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "AppleGaramond-Italic";
-    src: local("AppleGaramond-Italic"), 
-        url(/assets/fonts/AppleGaramond-Italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "AppleGaramond-Light";
-    src: local("AppleGaramond-Light"), 
-        url(/assets/fonts/AppleGaramond-Light.woff) format("woff");
-}
-
-@font-face {
-    font-family: "AppleGaramond-LightItalic";
-    src: local("AppleGaramond-LightItalic"), 
-        url(/assets/fonts/AppleGaramond-LightItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Univers-47-Condensed-Light-Regular";
-    src: local("Univers-47-Condensed-Light-Regular"), 
-        url(/assets/fonts/Univers-47-Condensed-Light-Regular.woff) format("woff");        
-}
-
-@font-face {
-    font-family: "Univers-47-Condensed-Light-Oblique";
-    src: local("Univers-47-Condensed-Light-Oblique"), 
-        url(/assets/fonts/Univers-47-Condensed-Light-Oblique.woff) format("woff");        
-}
-
-@font-face {
-    font-family: "Reenie Beanie";
-    src: local("ReenieBeanie-Regular"), 
-    		url(/assets/fonts/ReenieBeanie-Regular.woff2) format("woff2"),
-        url(/assets/fonts/ReenieBeanie-Regular.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Nothing You Could Do";
-    src: local("NothingYouCouldDo-Regular"), 
-    		url(/assets/fonts/NothingYouCouldDo-Regular.woff2) format("woff2"),
-        url(/assets/fonts/NothingYouCouldDo-Regular.woff) format("woff");        
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -322,8 +322,11 @@ audio, canvas, iframe, img, svg, video {
 /* || Homepage pagination */
 
 .pagination {
+  display: flex;
+  flex-direction: row;
   font: 2em "Reenie Beanie", "Nothing You Could Do";
   text-align: center;
+  
 }
 
  /* Pagination links */

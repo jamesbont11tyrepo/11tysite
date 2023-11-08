@@ -1,7 +1,7 @@
 ---
 pagination:
   data: collections.posts
-  size: 2
+  size: 1
   reverse: true
   alias: posts
 permalink: "/{% if pagination.pageNumber != 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
@@ -21,7 +21,7 @@ layout: layouts/base.html
 	</article>
 {%- endfor -%}
 
-{% if pagination.pages >= 2 %}
+{% if pagination.pages.length >= 2 %}
 		<nav class="pagination" aria-label="Pagination">
 {% set increment = 5 %}
 {% if pagination.hrefs[pagination.pageNumber - increment] %}
@@ -40,5 +40,5 @@ layout: layouts/base.html
 {% if pagination.hrefs[pagination.pageNumber + increment] %}
   <a href="{{ pagination.hrefs[pagination.pageNumber + increment] }}">&raquo;</a>
 {% endif %}
-		</nav> 
+		</nav>
 {% endif %}
