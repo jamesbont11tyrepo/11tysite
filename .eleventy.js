@@ -1,17 +1,76 @@
-const Image = require('@11ty/eleventy-img');
+const { join } = require('node:path');
+const { imageSize } = require('image-size');
+const escape = require('lodash.escape');
 
-(async () => {
-	const url = 'https://images.unsplash.com/photo-1608178398319-48f814d0750c';
+const EleventyImage = require('@11ty/eleventy-img');
 
-  const stats = await Image(url, {
-    formats: ['avif', 'webp'],
-    widths: [300, 800, 1000],
-    outputDir: '_site/images',
-  	urlPath: '/images',
-    dryRun: true,
-  });
-  console.log(stats);
-})();
+function stringifyAttributes(attributeMap) {
+    return Object.entries(attributeMap)
+        .map(([attribute, value]) => {
+            if (value === undefined || value === '') return '';
+            return `${attribute}="${value}"`;
+        })
+        .join(' ');
+}
+
+const insertImage = async function (source, alt, classes) {
+    source = join('src/assets/images', source);
+
+    const { width } = imageSize(source);
+
+    const data = await EleventyImage(source, {
+        widths: [640, 750, 828, 1080, 1200, 1920, 2048, 3840, width]
+                    .filter((a) => a <= width)
+                    .sort((a, b) => a - b),
+        formats: ['avif', 'webp', 'png'],
+        outputDir: 'dist/assets/images/',
+        urlPath: '/assets/images/',
+    });
+
+    const getLargestImage = (format) => {
+				// Make sure the image format is in the data.
+				if (!(format in data)) return false;
+				// Get the images of the format.
+				const images = data[format];
+				// Get the very last image in the array, which is the largest one.
+				return images.at(-1);
+		};
+
+		// Set a `base` variable to the largest png image.
+		const base = getLargestImage('png');
+    const sizes = '(min-width: 80ch) 80ch, 100vw';
+
+    const sources = Object.values(data)
+        .map((formatEntries) => {
+            const { sourceType } = formatEntries[0];
+            const srcset = formatEntries
+                .map((image) => image.srcset)
+                .join(', ');
+
+            return `<source ${stringifyAttributes({
+                type: sourceType,
+                srcset,
+                sizes,
+            })}>`;
+        })
+        .join('\n');
+
+    return `
+<picture>
+    ${sources}
+    <img ${stringifyAttributes({
+        height: base.height,
+        width: base.width,
+        src: base.url,
+        class: classes,
+        alt: escape(alt),
+        loading: 'lazy',
+        decoding: 'async',
+        sizes,
+    })}>
+</picture>
+`;
+};
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets/");
