@@ -16,3 +16,6 @@ Ordered list test:
 1. Blah
 2. Blah blah
 3. Blah blah blah
+
+See if this image appears:
+{% image "test2.jpg", "black-and-white photo" %}

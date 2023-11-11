@@ -14,7 +14,7 @@ function stringifyAttributes(attributeMap) {
 }
 
 const insertImage = async function (source, alt, classes) {
-    source = join('src/assets/images', source);
+    source = join('src/images', source);
 
     const { width } = imageSize(source);
 
@@ -23,7 +23,7 @@ const insertImage = async function (source, alt, classes) {
                     .filter((a) => a <= width)
                     .sort((a, b) => a - b),
         formats: ['avif', 'webp', 'png'],
-        outputDir: 'dist/assets/images/',
+        outputDir: '_site/assets/images/',
         urlPath: '/assets/images/',
     });
 
@@ -79,6 +79,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	eleventyConfig.addPassthroughCopy('robots.txt');
 	eleventyConfig.addPassthroughCopy('ai.txt');
+	eleventyConfig.addNunjucksAsyncShortcode('image', insertImage);
 	eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/**/*.md")
 })
