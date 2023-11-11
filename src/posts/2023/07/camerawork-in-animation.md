@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: Camerawork In Animation, Animation In Camerawork
 date: 2023-07-14
 categories: bauwerks
-tags: ['animation', 'animation studies', 'cinematography', 'Neon Genesis Evangelion', 'End of Evangelion', 'Mitsuo Iso', 'Steven Spielberg', 'Saving Private Ryan', 'Sound! Euphonium']
+tags: ['Animation', 'Animation Studies', 'Cinematography', 'Neon Genesis Evangelion', 'End of Evangelion', 'Mitsuo Iso', 'Steven Spielberg', 'Saving Private Ryan', 'Sound! Euphonium']
 ---		
 	
 <div class="postimg">

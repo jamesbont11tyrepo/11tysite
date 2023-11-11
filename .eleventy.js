@@ -1,9 +1,25 @@
+const Image = require('@11ty/eleventy-img');
+
+(async () => {
+	const url = 'https://images.unsplash.com/photo-1608178398319-48f814d0750c';
+
+  const stats = await Image(url, {
+    formats: ['avif', 'webp'],
+    widths: [300, 800, 1000],
+    outputDir: '_site/images',
+  	urlPath: '/images',
+    dryRun: true,
+  });
+  console.log(stats);
+})();
+
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets/");
 	eleventyConfig.addPassthroughCopy("src/css/");
 	eleventyConfig.addWatchTarget("src/css");
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	eleventyConfig.addPassthroughCopy('robots.txt');
+	eleventyConfig.addPassthroughCopy('ai.txt');
 	eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/**/*.md")
 })
@@ -21,7 +37,7 @@ module.exports = function(eleventyConfig) {
 
     const pairs = Object.entries(grouped)
     return pairs.reverse()
-	})
+})
 	eleventyConfig.addCollection("postsByMonth", collection => {
     const grouped = {}
     for (const post of collection.getFilteredByGlob("src/posts/**/*.md")) {

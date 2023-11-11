@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: Camerawork In Animation - So I Asked Mitsuo Iso...
 date: 2023-09-28
 categories: bauwerks
-tags: ['follow-up','Mitsuo Iso']
+tags: ['Follow-Up','Mitsuo Iso']
 ---
 
 

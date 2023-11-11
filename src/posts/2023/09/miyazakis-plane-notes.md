@@ -3,10 +3,10 @@ layout: layouts/post.html
 title: Miyazaki's Plane Notes
 date: 2023-09-23
 categories: bauwerks
-tags: ['animation', 'animation studies', 'hayao miyazaki', 'porco rosso', 'tamako market', 'everything']
+tags: ['Animation', 'Animation Studies', 'Hayao Miyazaki', 'Porco Rosso', 'Tamako Market']
 ---
 				
-I remembered another Twitter thread I wanted to archive, and since it looks like one or two of my tweets in the thread were deleted somehow (wasn't me...was it?), I might as well rebuild and expand on my initial thoughts.
+I remembered another Twitter thread I wanted to archive, and since it looks like one or two of my tweets in the thread were deleted somehow \(wasn't me...was it?\), I might as well rebuild and expand on my initial thoughts.
 				
 Last year, Masaaki Endo shared a layout sheet with some notes from Hayao Miyazaki, written during the production of Porco Rosso.
 				
