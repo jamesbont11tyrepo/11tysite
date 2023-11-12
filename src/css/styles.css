@@ -133,8 +133,10 @@ main {
 }
 
 article {
+  display: grid;
   margin: auto;
-  width: 80%
+  width: 80%;
+  grid-template-columns: 1fr 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -333,7 +335,6 @@ audio, canvas, iframe, img, svg, video {
   font: 2em "Reenie Beanie", "Nothing You Could Do";
   text-align: center;
   justify-content: center;
-  
 }
 
  /* Pagination links */
