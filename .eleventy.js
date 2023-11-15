@@ -19,7 +19,7 @@ const insertImage = async function (source, alt, classes) {
     const { width } = imageSize(source);
 
     const data = await EleventyImage(source, {
-        widths: [640, 750, 828, 1080, 1200, width]
+        widths: [360, 800, 1000, width]
                     .filter((a) => a <= width)
                     .sort((a, b) => a - b),
         formats: ['avif', 'webp', 'png'],
