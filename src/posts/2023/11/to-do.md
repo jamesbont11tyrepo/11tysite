@@ -5,6 +5,8 @@ date: 2023-11-09
 categories: bauwerks
 tags: ['To Do']
 ---
+This is a test paragraph to show off how Tufte-style margin notes* <aside>You know, the notes that show up on the side of the page like this.</aside> break any text styling that comes after the aside tag, like so.
+
 Unordered to-do list:
 
 - Add CSS for unordered and ordered lists
