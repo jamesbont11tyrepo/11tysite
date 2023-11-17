@@ -1,48 +1,48 @@
 /* || Fonts */
 @font-face {
-    font-family: "Permanent Marker";
-    src: local("Permanent Marker"), 
-    	url(/assets/fonts/PermanentMarker-Regular.woff2) format("woff2"),
-      url(/assets/fonts/PermanentMarker-Regular.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Permanent Marker";
+	src: local("Permanent Marker"), 
+		url(/assets/fonts/PermanentMarker-Regular.woff2) format("woff2"),
+		url(/assets/fonts/PermanentMarker-Regular.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Reenie Beanie";
-    src: local("ReenieBeanie-Regular"), 
-    		url(/assets/fonts/ReenieBeanie-Regular.woff2) format("woff2"),
-        url(/assets/fonts/ReenieBeanie-Regular.woff) format("woff");
+	font-family: "Reenie Beanie";
+	src: local("ReenieBeanie-Regular"), 
+		url(/assets/fonts/ReenieBeanie-Regular.woff2) format("woff2"),
+		url(/assets/fonts/ReenieBeanie-Regular.woff) format("woff");
 }
 
 @font-face {
-    font-family: "AppleGaramond-BoldItalic";
-    src: local("AppleGaramond-BoldItalic"), 
-        url(/assets/fonts/AppleGaramond-BoldItalic.woff) format("woff");
-    font-weight: bold;
-    font-style: italic;
+	font-family: "AppleGaramond-BoldItalic";
+	src: local("AppleGaramond-BoldItalic"), 
+		url(/assets/fonts/AppleGaramond-BoldItalic.woff) format("woff");
+	font-weight: bold;
+	font-style: italic;
 }
 
 @font-face {
-    font-family: "AppleGaramond-Italic";
-    src: local("AppleGaramond-Italic"), 
-        url(/assets/fonts/AppleGaramond-Italic.woff) format("woff");
-    font-weight: normal;
-    font-style: italic;
+	font-family: "AppleGaramond-Italic";
+	src: local("AppleGaramond-Italic"), 
+		url(/assets/fonts/AppleGaramond-Italic.woff) format("woff");
+	font-weight: normal;
+	font-style: italic;
 }
 
 @font-face {
-    font-family: "AppleGaramond-Light";
-    src: local("AppleGaramond-Light"), 
-        url(/assets/fonts/AppleGaramond-Light.woff) format("woff");
-    font-weight: light;
-    font-style: normal;
+	font-family: "AppleGaramond-Light";
+	src: local("AppleGaramond-Light"), 
+		url(/assets/fonts/AppleGaramond-Light.woff) format("woff");
+	font-weight: light;
+	font-style: normal;
 }
 
 @font-face {
     font-family: "AppleGaramond-LightItalic";
     src: local("AppleGaramond-LightItalic"), 
-        url(/assets/fonts/AppleGaramond-LightItalic.woff) format("woff");
+    	url(/assets/fonts/AppleGaramond-LightItalic.woff) format("woff");
     font-weight: light;
     font-style: italic;
 }
@@ -91,12 +91,6 @@ article {
   width: 90%;
 }
 
-/* section {
-	display: grid;
-	grid-template-columns: 4fr 1fr;
-	grid-gap: 2rem;
-} */
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "Permanent Marker";
   color: #3b3a36;
@@ -105,34 +99,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font: 2rem/2.5 "Permanent Marker";
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 h3 {
-  font: 2rem/3 "Permanent Marker";
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
-section p {
+p {
   font: 1.3rem "AppleGaramond-Light";
   color: #3b3a36;
-  width: 55%;
+  width: 60%;
 	margin: 1.4rem 0 1.4rem 0;
   overflow-wrap: break-word;
 }
 
-aside {       
-	font: 1.4rem "Reenie Beanie";    
-	line-height: 1.3;
-	float: right;
-	clear: right;
-	margin: 0 0 0 10rem;
-	width: 25%;  
-	vertical-align: baseline;
-  position: relative;
+strong {
+	font: 1rem "AppleGaramond-Bold";
+  margin: auto auto 1.3rem auto;
+  width: 80%;
+  text-align: left;
+  color: #3b3a36;
+}
+
+em {
+	font: 1.2rem "AppleGaramond-LightItalic";
+  margin: auto auto 1.3rem auto;
+  width: 80%;
+  text-align: left;
+  color: #3b3a36;
+}
+
+aside {    
+	font: 1.3rem "Reenie Beanie";
+	float: right;    
+	clear: right;    
+	margin-right: -60%;    
+	width: 30%;    
+	margin: -4rem 0 0 0;       
+	vertical-align: baseline;    
+	position: relative;
+}
+
+aside > p {
+  margin: 0.5rem;
 }
 
 p.tags {
@@ -156,18 +172,13 @@ time {
 }
 
 ul {
-	font: 1.3rem garamond;
+	font: 1.3rem "AppleGaramond-Light";
 	margin: 2rem;
 }
 
 ol {
-	font: 1.3rem garamond;
+	font: 1.3rem "AppleGaramond-Light";
 	margin: 2rem 2rem 2rem 2rem;
-}
-
-section img {
-	width: 55rem;
-	height: auto;
 }
 
 p.footer {
@@ -228,22 +239,37 @@ hr.solid {
 }
 
 /* Post media settings */
-div.postvid {
+article img {
+	width: 60%;
+	height: auto;
+	margin: 2rem 0 2rem 0;
 }
 
-div.postvid video {
-	width: 600px;
+article video {
+	width: 60%;
+	margin: 2rem 0 2rem 0;
+}
+
+/* || Gallery styles (Animation, Illustrations, Photography) */
+
+/* Grid settings */
+.gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
 }
 
 /* || Sitewide */
 
 .topnav {
 	position: fixed;
+	z-index: 2;
   width: 100%;
   top: 0;
   background-color: #3b3a36; 
   font: 2rem/2 "Reenie Beanie";
-  box-shadow: 0px 2px 3px 3px rgba(0,0,0,0.3), 0px 2px 3px 3px rgba(0,0,0,0.1);
+  box-shadow: 0rem 0.1rem 0.2rem 0.3rem rgba(0,0,0,0.3), 0rem 0.2rem 0.3rem 0.3rem rgba(0,0,0,0.1);
 }
 
 .topnav a {
@@ -260,7 +286,7 @@ div.postvid video {
 
 .topnav .split {
   float: left;
-  margin-left: -0.4em;
+  margin-left: -1.5rem;
   background-color: #3b3a36;
 }
 
@@ -277,7 +303,7 @@ div.postvid video {
  /* Pagination links */
 .pagination a {
   color: #3b3a36;
-  padding: 3px 10px;
+  padding: 0.2rem 0.5rem;
   text-decoration: none;
 }
 

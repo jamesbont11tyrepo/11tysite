@@ -6,8 +6,6 @@ categories: bauwerks
 tags: ['Follow-Up','Mitsuo Iso']
 ---
 
-
-
 I finally asked him - he even retweeted my post!
 			
 			<div class="postimg">

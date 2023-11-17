@@ -1,7 +1,7 @@
 ---
 pagination:
   data: collections.posts
-  size: 5
+  size: 2
   reverse: true
   alias: posts
 permalink: "/{% if pagination.pageNumber != 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
@@ -12,7 +12,7 @@ title: Home
 {%- for post in posts -%}
 	<article>
 		<h3><a class="permalink" href="{{ post.url }}">{{ post.data.title }}</a></h3>
-			<section>{{ post.content | safe }}</section>
+			{{ post.content | safe }}
 		<time>{{ post.data.date }}</time>
 		<p class="tags">Tags:
 			{% for tag in post.data.tags %}
