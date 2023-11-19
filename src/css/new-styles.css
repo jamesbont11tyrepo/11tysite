@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 4rem;
+  margin-bottom: 4rem;
 }
 
 h2 {
@@ -136,8 +137,19 @@ em {
   color: #3b3a36;
 }
 
+ul {
+	font: 1.3rem "AppleGaramond-Light";
+	margin: 2rem;
+}
+
+ol {
+	font: 1.3rem "AppleGaramond-Light";
+	margin: 2rem 2rem 2rem 2rem;
+}
+
 aside {    
-	font: 1.3rem "Reenie Beanie";
+	font: 1.4rem "Reenie Beanie";
+	color: #3b3a36;
 	float: right;    
 	clear: right;    
 	margin-right: -60%;    
@@ -154,31 +166,18 @@ aside > p {
 p.tags {
 	font: 1.3rem "Reenie Beanie";
 	color: #5b5b59;
-	display: flex;
-  margin-bottom: 1rem;
-}
-
-p.tags li {
-	list-style: none;
+	width: 65%;
+	display: block;
+	text-align: center;
+  margin: 1.1rem auto 1.1rem auto;
 }
 
 time {
 	font: 1.8rem "Reenie Beanie";
 	color: #5b5b59;
-	display: flex;
-	justify-content: left;
-	text-align: left;
-  margin: 1.5rem auto 0.3rem auto;
-}
-
-ul {
-	font: 1.3rem "AppleGaramond-Light";
-	margin: 2rem;
-}
-
-ol {
-	font: 1.3rem "AppleGaramond-Light";
-	margin: 2rem 2rem 2rem 2rem;
+	display: block;
+	text-align: center;
+  margin: 4.5rem auto auto auto;
 }
 
 p.footer {
@@ -226,7 +225,7 @@ a.permalink: hover {
 /* Horizontal solid border for ends of posts */
 hr.solid {
   border-top: 0.08rem solid #5b5b59;
-  width: 25%;
+  width: 45%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
@@ -247,7 +246,18 @@ article img {
 
 article video {
 	width: 60%;
+	height: auto;
 	margin: 2rem 0 2rem 0;
+}
+
+.gallery img {
+	width: 80%;
+	height: auto;	
+}
+
+.gallery.video {
+	width: 60%
+	height: auto;
 }
 
 /* || Gallery styles (Animation, Illustrations, Photography) */
@@ -256,8 +266,9 @@ article video {
 .gallery {
   display: grid;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 0.5rem;
+  width: 90%;
 }
 
 /* || Sitewide */
@@ -272,6 +283,12 @@ article video {
   box-shadow: 0rem 0.1rem 0.2rem 0.3rem rgba(0,0,0,0.3), 0rem 0.2rem 0.3rem 0.3rem rgba(0,0,0,0.1);
 }
 
+.topnav .split {
+  float: left;
+  margin-left: -1.5rem;
+  background-color: #3b3a36;
+}
+
 .topnav a {
   float: right;
   display: flex;
@@ -282,12 +299,6 @@ article video {
   text-align: center;
   padding: 0rem 1.7rem;
   text-decoration: none;
-}
-
-.topnav .split {
-  float: left;
-  margin-left: -1.5rem;
-  background-color: #3b3a36;
 }
 
 /* || Homepage pagination */

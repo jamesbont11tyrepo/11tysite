@@ -6,7 +6,9 @@ categories: bauwerks
 tags: ['To Do']
 ---
 
-This link goes to [Daring Fireball's](https://daringfireball.net/projects/markdown/syntax#link) Markdown notes on links. 
+This link goes to [Daring Fireball's][1] Markdown notes on links.
+
+[1]: https://daringfireball.net/projects/markdown/syntax#link/
 
 Unordered to-do list:
 
@@ -18,8 +20,4 @@ Ordered list test:
 1. Blah
 2. Blah blah
 3. Blah blah blah
-
-See if this image appears:
-
-{% image "test2.jpg", "black-and-white photo" %}
 

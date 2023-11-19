@@ -16,7 +16,7 @@ title: Home
 		<time>{{ post.data.date }}</time>
 		<p class="tags">Tags:
 			{% for tag in post.data.tags %}
-		<a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+		<a class="tags" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
 			{% endfor %}</p>
 		<hr class="solid">
 	</article>
