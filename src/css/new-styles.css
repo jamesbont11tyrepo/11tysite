@@ -1,5 +1,14 @@
 /* || Fonts */
 @font-face {
+	font-family: "Rock Salt";
+	src: local("Rock Salt"), 
+		url(/assets/fonts/RockSalt-Regular.woff2) format("woff2"),
+		url(/assets/fonts/RockSalt-Regular.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: "Permanent Marker";
 	src: local("Permanent Marker"), 
 		url(/assets/fonts/PermanentMarker-Regular.woff2) format("woff2"),
@@ -46,7 +55,6 @@
     font-weight: light;
     font-style: italic;
 }
-
 
 /* || General styles */
 
@@ -144,7 +152,7 @@ ul {
 
 ol {
 	font: 1.3rem "AppleGaramond-Light";
-	margin: 2rem 2rem 2rem 2rem;
+	margin: 2rem;
 }
 
 aside {    
@@ -239,20 +247,20 @@ hr.solid {
 
 /* Post media settings */
 article img {
-	width: 60%;
+	max-width: 60%;
 	height: auto;
+	object-fit: contain;
 	margin: 2rem 0 2rem 0;
 }
 
 article video {
-	width: 60%;
+	max-width: 60%;
 	height: auto;
 	margin: 2rem 0 2rem 0;
 }
 
 .gallery img {
-	width: 80%;
-	height: auto;	
+	height: auto;
 }
 
 .gallery.video {
@@ -267,37 +275,55 @@ article video {
   display: grid;
   justify-content: center;
   grid-template-columns: 2fr 2fr;
+  grid-auto-flow: dense;
   grid-gap: 0.5rem;
   width: 90%;
+  margin: auto;
 }
 
 /* || Sitewide */
 
-.topnav {
+header {
 	position: fixed;
 	z-index: 2;
   width: 100%;
   top: 0;
   background-color: #3b3a36; 
-  font: 2rem/2 "Reenie Beanie";
   box-shadow: 0rem 0.1rem 0.2rem 0.3rem rgba(0,0,0,0.3), 0rem 0.2rem 0.3rem 0.3rem rgba(0,0,0,0.1);
 }
 
-.topnav .split {
+.logo {
   float: left;
-  margin-left: -1.5rem;
+  margin: 0.5rem 0 0rem 0.3rem;
   background-color: #3b3a36;
 }
 
-.topnav a {
+nav ul li {
   float: right;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  font: 2rem/2 "Reenie Beanie";
   background-color: #3b3a36;
   color: #dbd4c3;
-  text-align: center;
-  padding: 0rem 1.7rem;
+  justify-content: space-between;
+  margin: -1.6rem 1.1rem 0 1.1rem;
+}
+
+nav ul li:hover {
+	cursor: pointer;
+}
+
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+nav ul li a {
+	background-color: #3b3a36;
+  color: #dbd4c3;
   text-decoration: none;
 }
 

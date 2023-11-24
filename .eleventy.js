@@ -1,7 +1,6 @@
 const { join } = require('node:path');
 const { imageSize } = require('image-size');
 const escape = require('lodash.escape');
-
 const EleventyImage = require('@11ty/eleventy-img');
 
 function stringifyAttributes(attributeMap) {
@@ -13,22 +12,20 @@ function stringifyAttributes(attributeMap) {
         .join(' ');
 }
 
-const insertImage = async function (source, alt, classes) {
+const insertImage = async function (source, alt, enableLink) {
     source = join('src/images', source);
 
     const { width } = imageSize(source);
 
     const data = await EleventyImage(source, {
-        widths: [400, 1100, width]
+        widths: [400, 600, 900, width]
                     .filter((a) => a <= width)
                     .sort((a, b) => a - b),
         formats: ['avif', 'webp', 'png'],
         sharpAvifOptions: {
-        	lossless:true
         },
         
         sharpWebpOptions: {
-        	lossless:true
         },
         outputDir: '_site/assets/images/',
         urlPath: '/assets/images/',
@@ -69,7 +66,6 @@ const insertImage = async function (source, alt, classes) {
         height: base.height,
         width: base.width,
         src: base.url,
-        class: classes,
         alt: escape(alt),
         decoding: 'async',
         sizes,

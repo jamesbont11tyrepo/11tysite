@@ -6,18 +6,13 @@ categories: bauwerks
 tags: ['To Do']
 ---
 
-This link goes to [Daring Fireball's][1] Markdown notes on links.
-
-[1]: https://daringfireball.net/projects/markdown/syntax#link/
+{% image "hongkong1.JPG", "alt", true %}
 
 Unordered to-do list:
 
+- Rename "header.html" to "head.html" and update shortcodes too
+- Figure out why bottom row of navbar links shift slightly when moving to the row below logo
+- Check img object-fit CSS to see if it works/isn't redundant
 - Build gallery layout
 - Set up RSS plugin
-
-Ordered list test:
-
-1. Blah
-2. Blah blah
-3. Blah blah blah
 
