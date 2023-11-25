@@ -283,7 +283,8 @@ article video {
 
 /* || Sitewide */
 
-header {
+/* navbar */
+header { 
 	position: fixed;
 	z-index: 2;
   width: 100%;
@@ -298,6 +299,7 @@ header {
   background-color: #3b3a36;
 }
 
+/* navbar links */
 nav ul li {
   float: right;
   display: flex;
@@ -306,6 +308,12 @@ nav ul li {
   color: #dbd4c3;
   justify-content: space-between;
   margin: -1.6rem 1.1rem 0 1.1rem;
+}
+
+nav ul li a {
+	background-color: #3b3a36;
+  color: #dbd4c3;
+  text-decoration: none;
 }
 
 nav ul li:hover {
@@ -318,13 +326,16 @@ nav ul li:hover {
   position: absolute;
   margin-top: 1rem;
   left: 0;
-  display: none;
+  display: flex;
 }
 
-nav ul li a {
-	background-color: #3b3a36;
-  color: #dbd4c3;
-  text-decoration: none;
+.dropdown:hover .dropdown li {
+  display: block;
+}
+
+.dropdown:hover {
+  background-color: #dbd4c3;
+  color: #3b3a36;
 }
 
 /* || Homepage pagination */

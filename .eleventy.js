@@ -27,6 +27,10 @@ const insertImage = async function (source, alt, enableLink) {
         
         sharpWebpOptions: {
         },
+        
+        sharpPngOptions: {
+        	quality: 90,
+        },
         outputDir: '_site/assets/images/',
         urlPath: '/assets/images/',
     });
@@ -58,8 +62,19 @@ const insertImage = async function (source, alt, enableLink) {
             })}>`;
         })
         .join('\n');
+        
+  	const getImageOfWidth= (format, width) => {
+				// Make sure the image format is in the data.
+				if (!(format in data)) return false;
+				// Get the images of the format.
+				const images = data[format];
+				// Get the image with the matching width.
+				return images.find((image) => image.width === width) || false;
+		};
+		getImageOfWidth('avif', 900);
 
     return `
+${enableLink ? `<a href="${(getImageOfWidth('avif', 900) || base).url}">` : ''}
 <picture>
     ${sources}
     <img ${stringifyAttributes({
@@ -71,6 +86,7 @@ const insertImage = async function (source, alt, enableLink) {
         sizes,
     })}>
 </picture>
+${enableLink ? `</a>` : ''}
 `;
 };
 

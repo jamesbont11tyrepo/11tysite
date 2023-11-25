@@ -6,7 +6,7 @@ categories: bauwerks
 tags: ['To Do']
 ---
 
-{% image "hongkong1.JPG", "alt", true %}
+{% image "hongkong1.png", "alt", true %}
 
 Unordered to-do list:
 
