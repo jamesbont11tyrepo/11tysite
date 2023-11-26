@@ -94,6 +94,7 @@ ${enableLink ? `</a>` : ''}
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets/");
 	eleventyConfig.addPassthroughCopy("src/css/");
+	eleventyConfig.addPassthroughCopy("src/favicon.ico");
 	eleventyConfig.addWatchTarget("src/css");
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	eleventyConfig.addFilter("postDate", (dateObj) => {
