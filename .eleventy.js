@@ -1,4 +1,5 @@
 const { join } = require('node:path');
+const { DateTime } = require("luxon");
 const { imageSize } = require('image-size');
 const escape = require('lodash.escape');
 const EleventyImage = require('@11ty/eleventy-img');
@@ -18,7 +19,7 @@ const insertImage = async function (source, alt, enableLink) {
     const { width } = imageSize(source);
 
     const data = await EleventyImage(source, {
-        widths: [400, 600, 900, width]
+        widths: [400, 600, 900]
                     .filter((a) => a <= width)
                     .sort((a, b) => a - b),
         formats: ['avif', 'webp', 'png'],
@@ -95,6 +96,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/css/");
 	eleventyConfig.addWatchTarget("src/css");
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+  	return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+})
 	eleventyConfig.addPassthroughCopy('robots.txt');
 	eleventyConfig.addPassthroughCopy('ai.txt');
 	eleventyConfig.addNunjucksAsyncShortcode('image', insertImage);

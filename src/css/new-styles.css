@@ -100,9 +100,9 @@ article {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Permanent Marker";
+  font-family: "Rock Salt";
   color: #3b3a36;
-  line-height: 1.1;
+  line-height: 1.5;
   text-wrap: balance; 
 }
 
@@ -234,9 +234,7 @@ a.permalink: hover {
 hr.solid {
   border-top: 0.08rem solid #5b5b59;
   width: 45%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3rem;
+  margin: auto auto 6rem auto;
 }
 
 /* Vertical line for separating footer links */
@@ -293,9 +291,11 @@ header {
   box-shadow: 0rem 0.1rem 0.2rem 0.3rem rgba(0,0,0,0.3), 0rem 0.2rem 0.3rem 0.3rem rgba(0,0,0,0.1);
 }
 
-.logo {
+.logo img {
   float: left;
-  margin: 0.5rem 0 0rem 0.3rem;
+  width: 25%;
+  height: auto;
+  margin: auto 0 0.8rem 0.3rem;
   background-color: #3b3a36;
 }
 
@@ -324,18 +324,24 @@ nav ul li:hover {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  margin-top: 1rem;
-  left: 0;
-  display: flex;
+  z-index: 2;
+  margin: 4rem 3rem 0 0;
+  display: none;
+  background-color: #3b3a36;
 }
 
-.dropdown:hover .dropdown li {
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
   display: block;
+  box-shadow: 0rem 0.1rem 0.2rem 0.3rem rgba(0,0,0,0.3), 0rem 0.2rem 0.3rem 0.3rem rgba(0,0,0,0.1);
 }
 
-.dropdown:hover {
-  background-color: #dbd4c3;
-  color: #3b3a36;
+.dropdown li {
+  width: 100%;
+  margin: 0.1rem 0 0 0;
 }
 
 /* || Homepage pagination */
