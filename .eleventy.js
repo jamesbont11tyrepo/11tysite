@@ -3,6 +3,7 @@ const { DateTime } = require("luxon");
 const { imageSize } = require('image-size');
 const escape = require('lodash.escape');
 const EleventyImage = require('@11ty/eleventy-img');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 function stringifyAttributes(attributeMap) {
     return Object.entries(attributeMap)
@@ -19,7 +20,7 @@ const insertImage = async function (source, alt, enableLink) {
     const { width } = imageSize(source);
 
     const data = await EleventyImage(source, {
-        widths: [400, 600, 900]
+        widths: [400, 600, 1000]
                     .filter((a) => a <= width)
                     .sort((a, b) => a - b),
         formats: ['avif', 'webp', 'png'],
@@ -27,6 +28,7 @@ const insertImage = async function (source, alt, enableLink) {
         },
         
         sharpWebpOptions: {
+        	quality: 90,
         },
         
         sharpPngOptions: {
@@ -72,10 +74,10 @@ const insertImage = async function (source, alt, enableLink) {
 				// Get the image with the matching width.
 				return images.find((image) => image.width === width) || false;
 		};
-		getImageOfWidth('avif', 900);
+		getImageOfWidth('avif', 1000);
 
     return `
-${enableLink ? `<a href="${(getImageOfWidth('avif', 900) || base).url}">` : ''}
+${enableLink ? `<a href="${(getImageOfWidth('avif', 1000) || base).url}">` : ''}
 <picture>
     ${sources}
     <img ${stringifyAttributes({
@@ -98,11 +100,12 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addWatchTarget("src/css");
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	eleventyConfig.addFilter("postDate", (dateObj) => {
-  	return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  	return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_HUGE);
 })
 	eleventyConfig.addPassthroughCopy('robots.txt');
 	eleventyConfig.addPassthroughCopy('ai.txt');
 	eleventyConfig.addNunjucksAsyncShortcode('image', insertImage);
+	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/**/*.md")
 })

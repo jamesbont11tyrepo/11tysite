@@ -10,16 +10,7 @@ title: Home
 ---
 
 {%- for post in posts -%}
-	<article>
-		<h3><a class="permalink" href="{{ post.url }}">{{ post.data.title }}</a></h3>
-			{{ post.content | safe }}
-		<time>{{ post.data.date | postDate }}</time>
-		<p class="tags">Tags:
-			{% for tag in post.data.tags %}
-		<a class="tags" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
-			{% endfor %}</p>
-		<hr class="solid">
-	</article>
+{% include "article.html" %}
 {%- endfor -%}
 
 {% if pagination.pages.length >= 2 %}

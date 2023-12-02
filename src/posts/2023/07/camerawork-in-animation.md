@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: Camerawork In Animation, Animation In Camerawork
 date: 2023-07-14
 categories: bauwerks
-tags: ['Animation', 'Animation Studies', 'Cinematography', 'Neon Genesis Evangelion', 'End of Evangelion', 'Mitsuo Iso', 'Steven Spielberg', 'Saving Private Ryan', 'Sound! Euphonium']
+tags: ['Animation', 'Animation Studies', 'Cinematography', 'End of Evangelion', 'Neon Genesis Evangelion', 'Mitsuo Iso', 'Saving Private Ryan', 'Sound! Euphonium', 'Steven Spielberg']
 ---		
 
 A while back, I wrote these thoughts on Twitter about the portrayal of the camera in this scene from End of Evangelion.

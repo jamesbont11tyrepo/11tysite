@@ -5,9 +5,7 @@ layout: layouts/base.html
 
 <h1>Tags</h1>
 
-<ul>
 {% for tag in collections.posts | getAllTags %}
     {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-    <li><a href="{{ tagUrl }}">{{ tag }}</a></li>
+    <p><a href="{{ tagUrl }}">{{ tag }}</a></p>
 {% endfor %}
-</ul>

@@ -96,7 +96,7 @@ main {
 
 article {
   margin: auto;
-  width: 90%;
+  width: 96%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -119,6 +119,7 @@ h2 {
 h3 {
   font-size: 1.8rem;
   margin-bottom: 3rem;
+  width: 60%;
 }
 
 p {
@@ -145,14 +146,16 @@ em {
   color: #3b3a36;
 }
 
-ul {
+article ul {
 	font: 1.3rem "AppleGaramond-Light";
 	margin: 2rem;
+	width: 60%;
 }
 
-ol {
+article ol {
 	font: 1.3rem "AppleGaramond-Light";
 	margin: 2rem;
+	width: 60%;
 }
 
 aside {    
@@ -162,7 +165,7 @@ aside {
 	clear: right;    
 	margin-right: -60%;    
 	width: 30%;    
-	margin: -4rem 0 0 0;       
+	margin: -5rem 0 0 0;       
 	vertical-align: baseline;    
 	position: relative;
 }
@@ -177,7 +180,7 @@ p.tags {
 	width: 65%;
 	display: block;
 	text-align: center;
-  margin: 1.1rem auto 1.1rem auto;
+  margin: 0.5rem auto 1.1rem auto;
 }
 
 time {
@@ -185,7 +188,7 @@ time {
 	color: #5b5b59;
 	display: block;
 	text-align: center;
-  margin: 4.5rem auto auto auto;
+  margin: 4rem auto auto auto;
 }
 
 p.footer {
@@ -232,8 +235,8 @@ a.permalink: hover {
 
 /* Horizontal solid border for ends of posts */
 hr.solid {
-  border-top: 0.08rem solid #5b5b59;
-  width: 45%;
+  border-top: 0.08rem solid #DFDFDF;
+  width: 25rem;
   margin: 2rem auto 6rem auto;
 }
 
@@ -247,7 +250,6 @@ hr.solid {
 article img {
 	max-width: 60%;
 	height: auto;
-	object-fit: contain;
 	margin: 2rem 0 2rem 0;
 }
 
@@ -258,6 +260,11 @@ article video {
 }
 
 .gallery img {
+	height: auto;
+}
+
+.gallery img.full {
+	span: 4;
 	height: auto;
 }
 
@@ -274,8 +281,8 @@ article video {
   justify-content: center;
   grid-template-columns: 2fr 2fr;
   grid-auto-flow: dense;
-  grid-gap: 0.5rem;
-  width: 90%;
+  grid-gap: 0.2rem;
+  width: 96%;
   margin: auto;
 }
 
@@ -285,6 +292,7 @@ article video {
 header { 
 	position: fixed;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 2;
@@ -295,9 +303,9 @@ header {
 }
 
 .logo img {
-  width: 50%;
+  max-width: 18rem;
   height: auto;
-  margin: auto 0 0.8rem 0.3rem;
+  margin: -0.3rem 0 0.5rem 0.3rem;
   background-color: #3b3a36;
 }
 
@@ -308,8 +316,8 @@ nav {
 
 nav ul {
 	list-style: none;
-	margin: 0;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 nav ul li {
@@ -352,6 +360,18 @@ ul li ul:hover {
   width: 100%;
   margin: 0 2rem 0 0;
 }
+
+@media (max-width: 945px) {
+	main {
+		margin-top: 9rem;
+	}
+} 
+
+@media (max-width: 653px) {
+	main {
+		margin-top: 13rem;
+	}
+} 
 
 /* || Homepage pagination */
 

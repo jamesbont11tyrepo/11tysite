@@ -12,9 +12,7 @@ eleventyComputed:
 
 <h1>Posts tagged with "{{ tag }}"</h1>
 
-<ol>
 {% set taglist = collections[ tag ] %}
 {% for post in taglist %}
-  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+  <p><a href="{{ post.url }}">{{ post.data.title }}</a></p>
 {% endfor %}
-</ol>
