@@ -1,6 +1,7 @@
 ---
 title: '{{ site.name }}'
 permalink: '/rss.xml'
+layout: ""
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -9,7 +10,7 @@ permalink: '/rss.xml'
 	<link href="{{ site.url }}/"/>
 	<updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
 	<id>{{ site.url }}</id>
-	{% for post in posts %}
+	{% for post in collections.posts %}
     {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
