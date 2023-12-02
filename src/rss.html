@@ -8,18 +8,16 @@ layout: ""
   <title>{{ title }}</title>
 	<link href="{{ site.url }}{{ permalink }}" rel="self"/>
 	<link href="{{ site.url }}/"/>
-	<updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ site.url }}</id>
 	{% for post in collections.posts %}
     {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
-      <updated>{{ post.date | rssDate }}</updated>
+      <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{ absolutePostUrl }}</id>
-      <content type="html"><![CDATA[
-        {{ post.content | safe }}
-      ]]></content>
+      <content xml:lang="en" type="html">{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
     </entry>
 	{% endfor %}
 </feed>
