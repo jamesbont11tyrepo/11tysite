@@ -2,7 +2,7 @@
 layout: layouts/post.html
 title: To Do List
 date: 2023-11-09
-categories: bauwerks
+categories: none
 tags: ['To Do']
 ---
 {% image "LA-53070009.jpg", "alt", true %}

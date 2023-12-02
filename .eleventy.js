@@ -106,12 +106,12 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('ai.txt');
 	eleventyConfig.addNunjucksAsyncShortcode('image', insertImage);
 	eleventyConfig.addPlugin(pluginRss);
-	eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/**/*.md")
+	eleventyConfig.addCollection("bauwerks", function (collection) {
+  return collection.getAll().filter((item) => item.data.category);
 })
 	eleventyConfig.addCollection("postsByYear", collection => {
     const grouped = {}
-    for (const post of collection.getFilteredByGlob("src/posts/**/*.md")) {
+    for (const post of collection.getAll().filter((item) => item.data.category)) {
         const year = post.date.getFullYear()
 
         if (!grouped.hasOwnProperty(year)) {
@@ -126,7 +126,7 @@ module.exports = function(eleventyConfig) {
 })
 	eleventyConfig.addCollection("postsByMonth", collection => {
     const grouped = {}
-    for (const post of collection.getFilteredByGlob("src/posts/**/*.md")) {
+    for (const post of collection.getAll().filter((item) => item.data.category)) {
         const year = post.date.getFullYear()
         const month = post.date.getMonth()
 
