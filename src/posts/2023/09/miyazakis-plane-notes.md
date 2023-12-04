@@ -2,7 +2,7 @@
 layout: layouts/post.html
 title: Miyazaki's Plane Notes
 date: 2023-09-23
-categories: bauwerks
+category: bauwerks
 tags: ['Animation', 'Animation Studies', 'Hayao Miyazaki', 'Porco Rosso', 'Tamako Market']
 ---
 				

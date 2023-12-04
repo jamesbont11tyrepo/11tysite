@@ -2,7 +2,7 @@
 layout: layouts/post.html
 title: Camerawork In Animation Follow-Up
 date: 2023-09-28
-categories: bauwerks
+category: bauwerks
 tags: ['Follow-Up','Mitsuo Iso']
 ---
 

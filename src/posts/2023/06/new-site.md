@@ -2,7 +2,7 @@
 layout: layouts/post.html
 title: New Site
 date: 2023-06-13
-categories: bauwerks
+category: bauwerks
 tags: ['First Post']
 ---
 

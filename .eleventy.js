@@ -23,16 +23,14 @@ const insertImage = async function (source, alt, enableLink) {
         widths: [400, 600, 1000]
                     .filter((a) => a <= width)
                     .sort((a, b) => a - b),
-        formats: ['avif', 'webp', 'png'],
-        sharpAvifOptions: {
-        },
-        
+        formats: ['webp', 'png'],
         sharpWebpOptions: {
-        	quality: 90,
+        	lossless: true,
+        	quality: 100,
         },
         
         sharpPngOptions: {
-        	quality: 90,
+        	quality: 93,
         },
         outputDir: '_site/assets/images/',
         urlPath: '/assets/images/',
@@ -74,10 +72,10 @@ const insertImage = async function (source, alt, enableLink) {
 				// Get the image with the matching width.
 				return images.find((image) => image.width === width) || false;
 		};
-		getImageOfWidth('avif', 1000);
+		getImageOfWidth('webp', 1000);
 
     return `
-${enableLink ? `<a href="${(getImageOfWidth('avif', 1000) || base).url}">` : ''}
+${enableLink ? `<a href="${(getImageOfWidth('webp', 1000) || base).url}">` : ''}
 <picture>
     ${sources}
     <img ${stringifyAttributes({
@@ -107,7 +105,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addNunjucksAsyncShortcode('image', insertImage);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addCollection("bauwerks", function (collection) {
-  return collection.getAll().filter((item) => item.data.category);
+  return collection.getAll().filter((item) => item.data.category === "bauwerks");
 })
 	eleventyConfig.addCollection("postsByYear", collection => {
     const grouped = {}
