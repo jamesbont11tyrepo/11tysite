@@ -9,9 +9,10 @@ layout: layouts/base.html
 title: Home
 ---
 
-{%- for post in posts -%}
-{% include "article.html" %}
-{%- endfor -%}
+{% from "article.html" import article %}
+{% for post in collections.bauwerks %}
+  {{ article({title: post.data.title, href: post.url, date: post.date, tags: post.data.tags, content: post.content}) }}
+{% endfor %}
 
 {% if pagination.pages.length >= 2 %}
 		<nav class="pagination" aria-label="Pagination">

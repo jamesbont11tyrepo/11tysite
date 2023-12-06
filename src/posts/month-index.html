@@ -13,5 +13,6 @@ eleventyComputed:
 
   {%- set monthPosts = monthData[1] -%}
   {% for post in monthPosts | reverse %}
-  {% include "article.html" %}
+  {% from "article.html" import article %}
+  {{ article({title: post.data.title, href: post.url, date: post.date, tags: post.data.tags, content: post.content}) }}
   {% endfor %}

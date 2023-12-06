@@ -2,4 +2,6 @@
 layout: layouts/page.html
 ---
 
-{% include "article.html" %}
+{% from "article.html" import article %}
+
+{{ article({ title: title, href: page.url, date: date, tags: tags, content: content}) }}
