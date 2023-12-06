@@ -9,6 +9,7 @@ tags: ['To Do']
 
 Unordered to-do list:
 
+- Post order is now messed up after changing the posts collection from a glob to a category filter. Investigate.
 - Add @media hover queries for touchscreen use with dropdown
 - Rename "header.html" to "head.html" and update shortcodes too
 - Build gallery layout
