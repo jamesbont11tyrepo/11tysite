@@ -9,10 +9,11 @@ eleventyComputed:
   title: "Posts from {{ monthData[0] }}"
 ---
 
+{% from "article.html" import article %}
+
 <h1>Posts from {{ monthData[0] }}</h1>
 
   {%- set monthPosts = monthData[1] -%}
   {% for post in monthPosts | reverse %}
-  {% from "article.html" import article %}
   {{ article({title: post.data.title, href: post.url, date: post.date, tags: post.data.tags, content: post.content}) }}
   {% endfor %}

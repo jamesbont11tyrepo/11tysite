@@ -10,7 +10,8 @@ title: Home
 ---
 
 {% from "article.html" import article %}
-{% for post in collections.bauwerks %}
+
+{% for post in posts %}
   {{ article({title: post.data.title, href: post.url, date: post.date, tags: post.data.tags, content: post.content}) }}
 {% endfor %}
 
