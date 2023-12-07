@@ -9,11 +9,11 @@ eleventyComputed:
   title: "Posts from {{ yearData[0] }}"
 ---
 
- {% from "article.html" import article %}
+{% from "article.html" import article %}
 
 <h1>Posts from {{ yearData[0] }}</h1>
 
-  {%- set yearPosts = yearData[1] -%}
-  {% for post in yearPosts | reverse %}
-  {{ article({title: post.data.title, href: post.url, date: post.date, tags: post.data.tags, content: post.content}) }}
-  {% endfor %}
+{%- set yearPosts = yearData[1] -%}
+{% for post in yearPosts | reverse %}
+	{{ article({title: post.data.title, href: post.url, date: post.date, tags: post.data.tags, content: post.content}) }}
+{% endfor %}

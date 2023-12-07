@@ -1,59 +1,40 @@
 /* || Fonts */
 @font-face {
 	font-family: "Rock Salt";
-	src: local("Rock Salt"), 
-		url(/assets/fonts/RockSalt-Regular.woff2) format("woff2"),
-		url(/assets/fonts/RockSalt-Regular.woff) format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Permanent Marker";
-	src: local("Permanent Marker"), 
-		url(/assets/fonts/PermanentMarker-Regular.woff2) format("woff2"),
-		url(/assets/fonts/PermanentMarker-Regular.woff) format("woff");
-	font-weight: normal;
-	font-style: normal;
+	src: url("/assets/fonts/RockSalt-Regular.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Reenie Beanie";
-	src: local("ReenieBeanie-Regular"), 
-		url(/assets/fonts/ReenieBeanie-Regular.woff2) format("woff2"),
-		url(/assets/fonts/ReenieBeanie-Regular.woff) format("woff");
+	src: url("/assets/fonts/ReenieBeanie-Regular.woff2") format("woff2");
 }
 
 @font-face {
-	font-family: "AppleGaramond-BoldItalic";
-	src: local("AppleGaramond-BoldItalic"), 
-		url(/assets/fonts/AppleGaramond-BoldItalic.woff) format("woff");
-	font-weight: bold;
-	font-style: italic;
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/cormorantgaramond-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "AppleGaramond-Italic";
-	src: local("AppleGaramond-Italic"), 
-		url(/assets/fonts/AppleGaramond-Italic.woff) format("woff");
-	font-weight: normal;
-	font-style: italic;
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/cormorantgaramond-italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-	font-family: "AppleGaramond-Light";
-	src: local("AppleGaramond-Light"), 
-		url(/assets/fonts/AppleGaramond-Light.woff) format("woff");
-	font-weight: light;
-	font-style: normal;
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/cormorantgaramond-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "AppleGaramond-LightItalic";
-    src: local("AppleGaramond-LightItalic"), 
-    	url(/assets/fonts/AppleGaramond-LightItalic.woff) format("woff");
-    font-weight: light;
-    font-style: italic;
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/cormorantgaramond-bolditalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
 }
 
 /* || General styles */
@@ -123,7 +104,7 @@ h3 {
 }
 
 p {
-  font: 1.3rem "AppleGaramond-Light";
+  font: 1.3rem "Cormorant Garamond";
   color: #3b3a36;
   width: 60%;
 	margin: 1.4rem 0 1.4rem 0;
@@ -131,7 +112,7 @@ p {
 }
 
 strong {
-	font: 1rem "AppleGaramond-Bold";
+  font-weight: bold;
   margin: auto auto 1.3rem auto;
   width: 80%;
   text-align: left;
@@ -139,7 +120,16 @@ strong {
 }
 
 em {
-	font: 1.2rem "AppleGaramond-LightItalic";
+	font-style: italic;
+  margin: auto auto 1.3rem auto;
+  width: 80%;
+  text-align: left;
+  color: #3b3a36;
+}
+
+em strong {
+	font-weight: bold;
+	font-style: italic;
   margin: auto auto 1.3rem auto;
   width: 80%;
   text-align: left;
@@ -147,13 +137,13 @@ em {
 }
 
 article ul {
-	font: 1.3rem "AppleGaramond-Light";
+	font: 1.3rem "Cormorant Garamond";
 	margin: 2rem;
 	width: 60%;
 }
 
 article ol {
-	font: 1.3rem "AppleGaramond-Light";
+	font: 1.3rem "Cormorant Garamond";
 	margin: 2rem;
 	width: 60%;
 }

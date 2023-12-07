@@ -16,13 +16,13 @@ title: Home
 {% endfor %}
 
 {% if pagination.pages.length >= 2 %}
-		<nav class="pagination" aria-label="Pagination">
+	<nav class="pagination" aria-label="Pagination">
 {% set increment = 5 %}
 {% if pagination.hrefs[pagination.pageNumber - increment] %}
   <a href="{{ pagination.hrefs[pagination.pageNumber - increment] }}">&laquo;</a>
 {% endif %}
 {% if pagination.href.previous %}
-			<a href="{{ pagination.href.previous }}">&lt;</a>
+	<a href="{{ pagination.href.previous }}">&lt;</a>
 {% endif %}
 {%- for pageEntry in pagination.pages %}		
 			<a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>

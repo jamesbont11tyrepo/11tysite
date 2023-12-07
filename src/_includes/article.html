@@ -1,12 +1,12 @@
 {% macro article(params) %}
 <article>
 	<h3><a class="permalink" href="{{ params.href }}">{{ params.title }}</a></h3>
-			{{ params.content | safe }}
+		{{ params.content | safe }}
 	<time>{{ params.date | postDate }}</time>
 	<p class="tags">Tags:
-			{% for tag in params.tags %}
+		{% for tag in params.tags %}
 	<a class="tags" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
-			{% endfor %}</p>
+		{% endfor %}</p>
 	<hr class="solid">
 </article>
 {% endmacro %}

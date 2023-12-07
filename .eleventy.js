@@ -105,7 +105,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addNunjucksAsyncShortcode('image', insertImage);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addCollection("bauwerks", function (collection) {
-  return collection.getAllSorted().reverse().filter((item) => item.data.category === "bauwerks");
+  return collection.getAllSorted().filter((item) => item.data.category === "bauwerks");
 })
 	eleventyConfig.addCollection("postsByYear", collection => {
     const grouped = {}

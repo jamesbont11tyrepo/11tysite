@@ -6,6 +6,6 @@ layout: layouts/base.html
 <h1>Tags</h1>
 
 {% for tag in collections.bauwerks | getAllTags %}
-    {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-    <p><a href="{{ tagUrl }}">{{ tag }}</a></p>
+	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<p><a href="{{ tagUrl }}">{{ tag }}</a></p>
 {% endfor %}

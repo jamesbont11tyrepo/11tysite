@@ -34,7 +34,7 @@ If you watch Japanese animation from, say, 2010 onwards, you've probably noticed
 <source src="_site/assets/videos/euphonium1long.webm" type="video/webm">
 </video>
 
-This is a pretty typical example that I see often - static shots from a wide variety of angles, and they all move like a ghost floating around and observing the scene omnipresently. In context of each scene, and the show in general, none of these shots are from a character's POV, nor are they trying to convey a documentary-style feel to the footage. 
+This is a pretty typical example that I see often - static shots from a wide variety of angles, and they all move like a ghost floating around and observing the scene omnipresently. In context of each scene and the show in general, none of these shots are from a character's POV, nor are they trying to convey a documentary-style feel to the footage. 
 
 Almost every shot has the same amount of shake, and pretty similar camera movement too. I don't know why any of these shots are treated like handheld shots other than going for "vibes" or something, and I don't know why almost every shot uses this effect as it ends up ringing hollow from being overused, or even coming across as twee.
 
