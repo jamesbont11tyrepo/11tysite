@@ -10,31 +10,10 @@
 }
 
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/cormorantgaramond-regular.woff2") format("woff2");
-  font-weight: normal;
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/ebgaramond.woff2") format("woff2-variations");
+  font-weight: 400 800;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/cormorantgaramond-italic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/cormorantgaramond-bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/cormorantgaramond-bolditalic.woff2") format("woff2");
-  font-weight: bold;
-  font-style: italic;
 }
 
 /* || General styles */
@@ -104,7 +83,7 @@ h3 {
 }
 
 p {
-  font: 1.3rem "Cormorant Garamond";
+  font: 1.3rem "EB Garamond";
   color: #3b3a36;
   width: 60%;
 	margin: 1.4rem 0 1.4rem 0;
@@ -112,7 +91,7 @@ p {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 600;
   margin: auto auto 1.3rem auto;
   width: 80%;
   text-align: left;
@@ -128,7 +107,7 @@ em {
 }
 
 em strong {
-	font-weight: bold;
+	font-weight: 600;
 	font-style: italic;
   margin: auto auto 1.3rem auto;
   width: 80%;
@@ -137,13 +116,13 @@ em strong {
 }
 
 article ul {
-	font: 1.3rem "Cormorant Garamond";
+	font: 1.3rem "EB Garamond";
 	margin: 2rem;
 	width: 60%;
 }
 
 article ol {
-	font: 1.3rem "Cormorant Garamond";
+	font: 1.3rem "EB Garamond";
 	margin: 2rem;
 	width: 60%;
 }

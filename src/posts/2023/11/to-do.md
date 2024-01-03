@@ -14,5 +14,6 @@ This is a **test sentence** before *my* ***to-do*** list.
 - Build gallery layout
 - Is it possible to make Tags lists show full posts? Terminal gives me a "circular error" message since it's calling the tags collection within each post. Possible workaround?
 - Set up RSS plugin
-- Test
+- Change increment-5 pagination to jump to the beginning/end of posts instead
+- Add 'max-width' in CSS for site and set to 1280px? (see https://wesort.co.uk/blog/writing/images-for-websites)
 

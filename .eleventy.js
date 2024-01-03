@@ -4,7 +4,6 @@ const { imageSize } = require('image-size');
 const escape = require('lodash.escape');
 const EleventyImage = require('@11ty/eleventy-img');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-
 function stringifyAttributes(attributeMap) {
     return Object.entries(attributeMap)
         .map(([attribute, value]) => {
@@ -96,6 +95,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/css/");
 	eleventyConfig.addPassthroughCopy("src/favicon.ico");
 	eleventyConfig.addWatchTarget("src/css");
+	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	eleventyConfig.addFilter("postDate", (dateObj) => {
   	return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_HUGE);
@@ -103,9 +103,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('robots.txt');
 	eleventyConfig.addPassthroughCopy('ai.txt');
 	eleventyConfig.addNunjucksAsyncShortcode('image', insertImage);
-	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addCollection("bauwerks", function (collection) {
-  return collection.getAllSorted().filter((item) => item.data.category === "bauwerks");
+  	return collection.getAllSorted().filter((item) => item.data.category === "bauwerks");
 })
 	eleventyConfig.addCollection("postsByYear", collection => {
     const grouped = {}
